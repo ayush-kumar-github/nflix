@@ -1,7 +1,14 @@
 import React from "react";
+import Body from "./components/Body";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const App = () => {
-  return <div className="bg-red-300">App</div>;
+  return (
+    <Provider store={appStore}>
+      <Body />
+    </Provider>
+  );
 };
 
 export default App;
